@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
+
+const App=() =>{
+
+  let newTime= new Date().toLocaleTimeString();
+// console.log(newTime);
+
+const state=useState();
+
+const[ctime,setTime]=useState(newTime);
+
+const updateTime =()=>{
+  newTime= new Date().toLocaleTimeString();
+  setTime(newTime);
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>{ctime}</h1>
+     <button onClick={updateTime}>GATE TIME</button>
+     
     </div>
   );
 }
