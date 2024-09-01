@@ -6,7 +6,8 @@ import { useState } from 'react';
 const App=() =>{
 
   let newTime= new Date().toLocaleTimeString();
-// console.log(newTime);
+// console.log(newTime);"
+//console.log("khursheed")
 
 const state=useState();
 
